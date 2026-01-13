@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marci Metzger | Pahrump Realtor</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body class="font-sans text-gray-800">
     <!-- HEADER -->
@@ -127,7 +129,7 @@
 
     <!-- ABOUT    -->
 
-    <section class="py-20">
+    <section class="py-20 bg-black">
       <div
         class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center animate-on-scroll animate-hidden"
       >
@@ -138,21 +140,21 @@
         />
 
         <div>
-          <h2 class="text-3xl font-bold mb-4">Why Work With Marci?</h2>
-          <p class="text-gray-600 mb-6">
+          <h2 class="text-3xl font-bold mb-4 text-white">Why Work With Marci?</h2>
+          <p class="text-white mb-6">
             With decades of experience in the Pahrump real estate market, Marci
             provides expert guidance, strong negotiation skills, and a personal
             approach that puts your goals first.
           </p>
 
-          <ul class="space-y-3">
+          <ul class="space-y-3 text-white">
             <li class="flex items-center gap-2">
               ✔ 30+ Years Local Experience
             </li>
             <li class="flex items-center gap-2">✔ Buyer & Seller Specialist</li>
             <li class="flex items-center gap-2">✔ Proven Market Expertise</li>
           </ul>
-          <p class="pt-5 text-xl font-bold1">📞 206-919-6886</p>
+          <p class="pt-5 text-xl font-bold text-white">📞 206-919-6886</p>
         </div>
       </div>
     </section>
@@ -213,7 +215,7 @@
       <div class="max-w-7xl mx-auto px-6">
         <!-- Heading -->
         <h3
-          class="text-center text-sm font-semibold text-gray-500 uppercase tracking-wider mb-10"
+          class="text-3xl md:text-4xl font-bold text-center mb-14"
         >
           Proudly Associated With
         </h3>
@@ -249,19 +251,45 @@
       </div>
     </section>
 
-    <style>
-      .animate-hidden {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.7s ease-out;
-      }
+    <! -- GALLERY -->
+    <section class="py-16 bg-white">
+      <h3 class="text-3xl md:text-4xl font-bold text-center mb-14">
+        Photo Gallery
+      </h3>
+      <div class="max-w-4xl mx-auto px-6">
+        <!-- Image -->
+        <div class="relative">
+          <button
+            id="prev-btn"
+            aria-label="Previous image"
+            class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur   rounded-full p-2 shadow hover:bg-white transition"
+          >
+            ‹
+          </button>
+          <img
+            id="gallery-image"
+            src="/Images/img1.webp"
+            alt="Gallery Image"
+            class="w-full h-[260px] sm:h-[420px] object-cover rounded-xl shadow-sm"
+          />
+          <button
+        id="next-btn"
+        aria-label="Next image"
+        class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur rounded-full p-2 shadow hover:bg-white transition"
+      >
+        ›
+      </button>
 
-      .animate-show {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    </style>
+    </div>
+        </div>
+        
+
+        <!-- Dots -->
+        <div id="gallery-dots" class="flex justify-center gap-3 mt-6"></div>
+      </div>
+    </section>
 
     <script src="animations.js"></script>
+    <script src="gallery.js"></script>
   </body>
 </html>

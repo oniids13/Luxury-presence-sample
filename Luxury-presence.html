@@ -7,6 +7,50 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-sans text-gray-800">
+    // HEADER
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-white shadow">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center">
+          <img
+            src="/Images/Marci_logo.webp"
+            alt="Marci Metzger Logo"
+            class="h-10 sm:h-10 md:h-12 w-auto object-contain"
+          />
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 font-medium">
+          <a href="#search" class="hover:text-emerald-600">HOME</a>
+          <a href="#about" class="hover:text-emerald-600">LISTINGS</a>
+          <a href="#listings" class="hover:text-emerald-600">LET'S MOVE</a>
+          <a href="#contact" class="hover:text-emerald-600"> ABOUT US </a>
+        </nav>
+
+        <button
+          id="menu-btn"
+          class="md:hidden flex flex-col gap-1.5 focus:outline-none"
+        >
+          <span class="w-6 h-0.5 bg-gray-800 transition"></span>
+          <span class="w-6 h-0.5 bg-gray-800 transition"></span>
+          <span class="w-6 h-0.5 bg-gray-800 transition"></span>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-white border-t shadow-lg"
+      >
+        <nav class="flex flex-col px-6 py-4 gap-4 font-medium">
+          <a href="#search" class="hover:text-emerald-600">HOME</a>
+          <a href="#about" class="hover:text-emerald-600">LISTINGS</a>
+          <a href="#listings" class="hover:text-emerald-600">LET'S MOVE</a>
+          <a href="#contact" class="hover:text-emerald-600"> ABOUT US </a>
+        </nav>
+      </div>
+    </header>
+
     // HERO section
     <section
       class="relative bg-cover bg-center min-h-screen flex items-center"

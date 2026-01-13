@@ -7,12 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-sans text-gray-800">
-    // HEADER
+    <!-- HEADER -->
 
     <header class="fixed top-0 left-0 w-full z-50 bg-white shadow">
       <div
         class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
       >
+        <!-- LOGO -->
         <a href="#" class="flex items-center">
           <img
             src="/Images/Marci_logo.webp"
@@ -20,6 +21,7 @@
             class="h-10 sm:h-10 md:h-12 w-auto object-contain"
           />
         </a>
+        <!-- NAV -->
 
         <nav class="hidden md:flex items-center gap-8 font-medium">
           <a href="#search" class="hover:text-emerald-600">HOME</a>
@@ -37,7 +39,7 @@
           <span class="w-6 h-0.5 bg-gray-800 transition"></span>
         </button>
       </div>
-
+      <!-- MOBILE NAV -->
       <div
         id="mobile-menu"
         class="md:hidden hidden bg-white border-t shadow-lg"
@@ -51,7 +53,7 @@
       </div>
     </header>
 
-    // HERO section
+    <!-- HERO -->
     <section
       class="relative bg-cover bg-center min-h-screen flex items-center"
       style="
@@ -85,6 +87,42 @@
           >
             Free Consultation
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH -->
+
+    <section
+      id="search"
+      class="py-20 bg-gray-50 animate-on-scroll animate-hidden"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8 text-center">
+          Find Your Perfect Home
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-4 bg-white p-6 rounded-xl shadow">
+          <input
+            type="text"
+            placeholder="City or ZIP"
+            class="border rounded-lg px-4 py-3 w-full"
+          />
+          <input
+            type="number"
+            placeholder="Min Price"
+            class="border rounded-lg px-4 py-3 w-full"
+          />
+          <input
+            type="number"
+            placeholder="Max Price"
+            class="border rounded-lg px-4 py-3 w-full"
+          />
+          <button
+            class="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg px-4 py-3"
+          >
+            Search Now
+          </button>
         </div>
       </div>
     </section>

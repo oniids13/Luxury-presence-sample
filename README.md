@@ -7,6 +7,8 @@ This project is a comprehensive redesign of the [Marci Metzger - The Ridge Realt
 **Original Website:** https://marcimetzger.com/  
 **Tech Stack:** HTML5, Tailwind CSS, Vanilla JavaScript
 
+**Revamp Website:** https://oniids13.github.io/Luxury-presence-sample/
+
 ---
 
 ## Changes & Improvements

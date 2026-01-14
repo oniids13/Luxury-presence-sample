@@ -1,11 +1,11 @@
 const images = [
-  "/images/img1.webp",
-  "/images/img2.webp",
-  "/images/img3.webp",
-  "/images/img4.webp",
-  "/images/img5.webp",
-  "/images/img6.webp",
-  "/images/img7.webp",
+  "images/img1.webp",
+  "images/img2.webp",
+  "images/img3.webp",
+  "images/img4.webp",
+  "images/img5.webp",
+  "images/img6.webp",
+  "images/img7.webp",
 ];
 
 // DOM Elements

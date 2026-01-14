@@ -221,56 +221,89 @@
             </div>
           </div>
 
-          <!-- Right Side - Stats Cards -->
-          <div class="hidden lg:block relative">
-            <!-- Floating Stats Cards -->
-            <div class="relative h-[500px]">
-              <!-- Card 1 - Years Experience -->
+          <!-- Right Side - Featured Property Preview -->
+          <div
+            class="hidden lg:block relative animate-on-scroll animate-hidden"
+          >
+            <div class="relative">
+              <!-- Main Property Card -->
               <div
-                class="absolute top-0 right-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 w-64 animate-on-scroll animate-hidden hover:bg-white/15 transition-all duration-500 hover:-translate-y-2"
+                class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden shadow-2xl"
               >
-                <div class="text-6xl font-bold text-emerald-400 mb-2">30+</div>
-                <div class="text-white font-semibold text-lg">
-                  Years Experience
+                <div class="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Featured Property"
+                    class="w-full h-64 object-cover"
+                  />
+                  <div class="absolute top-4 left-4">
+                    <span
+                      class="bg-emerald-500 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide"
+                      >Featured</span
+                    >
+                  </div>
                 </div>
-                <p class="text-gray-400 text-sm mt-2">
-                  Serving the Pahrump community since 1994
-                </p>
-              </div>
-
-              <!-- Card 2 - Homes Sold -->
-              <div
-                class="absolute top-40 left-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 w-64 animate-on-scroll animate-hidden hover:bg-white/15 transition-all duration-500 hover:-translate-y-2"
-                style="animation-delay: 0.2s"
-              >
-                <div class="text-6xl font-bold text-white mb-2">$28M</div>
-                <div class="text-white font-semibold text-lg">In Sales</div>
-                <p class="text-gray-400 text-sm mt-2">
-                  Annual transaction volume
-                </p>
-              </div>
-
-              <!-- Card 3 - Happy Clients -->
-              <div
-                class="absolute bottom-0 right-8 bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 backdrop-blur-md border border-emerald-500/30 rounded-3xl p-8 w-64 animate-on-scroll animate-hidden hover:from-emerald-500/30 transition-all duration-500 hover:-translate-y-2"
-                style="animation-delay: 0.4s"
-              >
-                <div class="text-6xl font-bold text-white mb-2">98%</div>
-                <div class="text-white font-semibold text-lg">
-                  Client Satisfaction
+                <div class="p-6">
+                  <p class="text-3xl font-bold text-white mb-2">$485,000</p>
+                  <p class="text-gray-300 mb-4">
+                    4 Beds • 3 Baths • 2,400 sqft
+                  </p>
+                  <div class="flex items-center gap-2 text-gray-400 text-sm">
+                    <svg
+                      class="w-4 h-4 text-emerald-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                    </svg>
+                    <span>Pahrump, Nevada</span>
+                  </div>
                 </div>
-                <p class="text-gray-400 text-sm mt-2">
-                  Based on customer reviews
-                </p>
               </div>
 
-              <!-- Decorative Circle -->
+              <!-- Floating "New Listing" Badge -->
               <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-emerald-500/30 rounded-full"
+                class="absolute -top-4 -right-4 bg-gradient-to-br from-amber-400 to-amber-500 text-white px-4 py-2 rounded-full shadow-lg animate-bounce"
+              >
+                <span class="text-sm font-bold">Just Listed!</span>
+              </div>
+
+              <!-- Decorative Elements -->
+              <div
+                class="absolute -bottom-6 -left-6 w-32 h-32 border-2 border-emerald-500/30 rounded-2xl"
               ></div>
               <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-white/10 rounded-full"
+                class="absolute -top-8 -left-8 w-16 h-16 bg-emerald-500/20 rounded-full blur-xl"
               ></div>
+            </div>
+
+            <!-- Quick Action -->
+            <div class="mt-8 text-center">
+              <a
+                href="#listings"
+                class="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-semibold transition-colors"
+              >
+                <span>View All Listings</span>
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -1012,36 +1045,450 @@
       });
     </script>
 
-    <!-- ABOUT    -->
-
-    <section class="py-20 bg-gray-900">
+    <!-- ABOUT / REALTOR PROFILE -->
+    <section
+      class="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden"
+    >
+      <!-- Background Pattern -->
       <div
-        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center animate-on-scroll animate-hidden"
-      >
-        <img
-          src="/Images/Marci_pic.webp"
-          class="rounded-xl shadow-lg"
-          alt="Realtor"
-        />
+        class="absolute inset-0 opacity-5"
+        style="
+          background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        "
+      ></div>
 
-        <div>
-          <h2 class="text-3xl font-bold mb-4 text-white">
-            Why Work With Marci?
-          </h2>
-          <p class="text-white mb-6">
-            With decades of experience in the Pahrump real estate market, Marci
-            provides expert guidance, strong negotiation skills, and a personal
-            approach that puts your goals first.
+      <!-- Decorative Elements -->
+      <div
+        class="absolute top-20 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-20 left-0 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl"
+      ></div>
+
+      <div class="relative max-w-7xl mx-auto px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-16 animate-on-scroll animate-hidden">
+          <p
+            class="text-emerald-400 font-semibold tracking-widest uppercase text-sm mb-3"
+          >
+            Meet Your Realtor
           </p>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Your Trusted Local Expert
+          </h2>
+        </div>
 
-          <ul class="space-y-3 text-white">
-            <li class="flex items-center gap-2">
-              ✔ 30+ Years Local Experience
-            </li>
-            <li class="flex items-center gap-2">✔ Buyer & Seller Specialist</li>
-            <li class="flex items-center gap-2">✔ Proven Market Expertise</li>
-          </ul>
-          <p class="pt-5 text-xl font-bold text-white">📞 206-919-6886</p>
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Left: Profile Image Area -->
+          <div class="relative animate-on-scroll animate-hidden">
+            <!-- Decorative Frame -->
+            <div
+              class="absolute -inset-4 bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 rounded-3xl blur-sm"
+            ></div>
+            <div
+              class="absolute -inset-4 border border-emerald-500/20 rounded-3xl"
+            ></div>
+
+            <!-- Main Image Container -->
+            <div class="relative">
+              <img
+                src="/Images/Marci_pic.webp"
+                class="relative rounded-2xl shadow-2xl w-full object-cover"
+                alt="Marci Metzger - Nevada Realtor"
+              />
+
+              <!-- Floating Experience Badge -->
+              <div
+                class="absolute -bottom-6 -right-6 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-6 rounded-2xl shadow-xl"
+              >
+                <p class="text-4xl font-bold">30+</p>
+                <p class="text-sm font-medium opacity-90">Years Experience</p>
+              </div>
+
+              <!-- Decorative Corner Accent -->
+              <div
+                class="absolute -top-3 -left-3 w-20 h-20 border-l-4 border-t-4 border-emerald-500 rounded-tl-xl"
+              ></div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex items-center justify-center gap-4 mt-12">
+              <!-- Facebook -->
+              <a
+                href="https://www.facebook.com/MarciHomes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow on Facebook"
+                class="group relative w-14 h-14 bg-white/10 hover:bg-[#1877F2] border border-white/20 hover:border-[#1877F2] rounded-full flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-2 hover:scale-110 hover:shadow-lg hover:shadow-[#1877F2]/30"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
+                >
+                  <path
+                    d="M20 12.047C20 7.603 16.418 4 12 4s-8 3.603-8 8.047c0 4.017 2.925 7.346 6.75 7.95v-5.624H8.719v-2.326h2.031v-1.773c0-2.017 1.194-3.13 3.022-3.13.875 0 1.79.157 1.79.157v1.98h-1.008c-.994 0-1.304.62-1.304 1.257v1.51h2.219l-.355 2.325H13.25v5.624c3.825-.604 6.75-3.933 6.75-7.95z"
+                  />
+                </svg>
+                <!-- Tooltip -->
+                <span
+                  class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none"
+                >
+                  Facebook
+                </span>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/marciandlauren_nvrealtors/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow on Instagram"
+                class="group relative w-14 h-14 bg-white/10 hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F77737] border border-white/20 hover:border-transparent rounded-full flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-2 hover:scale-110 hover:shadow-lg hover:shadow-[#FD1D1D]/30"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+                <!-- Tooltip -->
+                <span
+                  class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none"
+                >
+                  Instagram
+                </span>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/in/marci-metzger-30642496/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Connect on LinkedIn"
+                class="group relative w-14 h-14 bg-white/10 hover:bg-[#0A66C2] border border-white/20 hover:border-[#0A66C2] rounded-full flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-2 hover:scale-110 hover:shadow-lg hover:shadow-[#0A66C2]/30"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
+                >
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+                <!-- Tooltip -->
+                <span
+                  class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none"
+                >
+                  LinkedIn
+                </span>
+              </a>
+
+              <!-- Yelp -->
+              <a
+                href="https://www.yelp.com/biz/xr3yQN_m2SgO0R_7S6p62w"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View on Yelp"
+                class="group relative w-14 h-14 bg-white/10 hover:bg-[#D32323] border border-white/20 hover:border-[#D32323] rounded-full flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-2 hover:scale-110 hover:shadow-lg hover:shadow-[#D32323]/30"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
+                >
+                  <path
+                    d="M9.988 14.158c-.037.01-3.983 1.134-4.224 1.134-.554-.029-.674-.515-.726-.99a6.35 6.35 0 0 1 .011-1.487c.07-.596.201-1.431.883-1.396.175 0 2.447.822 4.11 1.41.624.215.679 1.136-.054 1.33zm2.112-3.616c.065 1.213-.93 1.54-1.722.454L6.501 5.663c-.055-.21.011-.394.193-.553.57-.523 3.626-1.263 4.432-1.082.273.06.441.194.503.4.048.263.42 5.314.47 6.114zm-.051 5.232c0 .146.007 3.696-.062 3.857-.084.19-.256.308-.522.356-.368.054-.988-.06-1.86-.34-.803-.257-2.068-.682-1.798-1.349.102-.219 1.874-1.994 2.82-2.971.437-.483 1.45-.175 1.422.447zm6.572-3.74c-.204.118-4.041.896-4.307.972l.01-.02c-.66.15-1.29-.586-.85-1.098.136-.117 2.404-2.933 2.656-3.08.19-.113.412-.12.667-.018.671.28 2.01 2.003 2.094 2.686-.004.092.044.371-.27.558zm.368 4.15c-.098.654-1.623 2.33-2.327 2.571-.251.083-.47.064-.645-.063-.183-.111-2.254-3.083-2.367-3.248-.398-.514.248-1.263.933-1.054 0 0 4.03 1.133 4.184 1.25.19.131.262.312.222.544z"
+                  />
+                </svg>
+                <!-- Tooltip -->
+                <span
+                  class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none"
+                >
+                  Yelp
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Content Area -->
+          <div class="space-y-8 animate-on-scroll animate-hidden">
+            <!-- Name & Title -->
+            <div>
+              <h3 class="text-4xl md:text-5xl font-bold text-white mb-3">
+                Marci Metzger
+              </h3>
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="text-emerald-400 font-semibold"
+                  >Licensed Nevada Realtor</span
+                >
+                <span class="text-gray-500">•</span>
+                <span class="text-gray-400">The Ridge Realty Group</span>
+              </div>
+            </div>
+
+            <!-- Bio -->
+            <div class="space-y-4">
+              <p class="text-gray-300 text-lg leading-relaxed">
+                With over three decades of experience in the Pahrump real estate
+                market, I've built my career on a foundation of
+                <span class="text-white font-medium"
+                  >trust, expertise, and genuine care</span
+                >
+                for my clients. Every transaction is more than a deal—it's
+                helping families find their place to call home.
+              </p>
+              <p class="text-gray-400 leading-relaxed">
+                My deep knowledge of the local market, combined with strong
+                negotiation skills and attention to detail, ensures that whether
+                you're buying your first home or selling a property you've loved
+                for years, you'll have a trusted advocate by your side every
+                step of the way.
+              </p>
+            </div>
+
+            <!-- Quote -->
+            <blockquote class="relative pl-6 border-l-4 border-emerald-500">
+              <p class="text-xl text-white italic leading-relaxed">
+                "Real estate isn't just about properties—it's about people,
+                dreams, and building futures. That's what drives me every single
+                day."
+              </p>
+              <footer class="mt-3 text-emerald-400 font-medium">
+                — Marci Metzger
+              </footer>
+            </blockquote>
+
+            <!-- Specialization Cards -->
+            <div class="grid grid-cols-3 gap-4">
+              <div
+                class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 hover:border-emerald-500/30 transition-all duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-3"
+                >
+                  <svg
+                    class="w-6 h-6 text-emerald-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-white font-semibold mb-1">Buyer's Agent</h4>
+                <p class="text-gray-400 text-sm">Find your dream home</p>
+              </div>
+
+              <div
+                class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 hover:border-emerald-500/30 transition-all duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-3"
+                >
+                  <svg
+                    class="w-6 h-6 text-emerald-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-white font-semibold mb-1">Seller's Agent</h4>
+                <p class="text-gray-400 text-sm">Get top dollar</p>
+              </div>
+
+              <div
+                class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 hover:border-emerald-500/30 transition-all duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-3"
+                >
+                  <svg
+                    class="w-6 h-6 text-emerald-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-white font-semibold mb-1">Investment</h4>
+                <p class="text-gray-400 text-sm">Build your wealth</p>
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a
+                href="#contact"
+                class="group inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/25"
+              >
+                <span>Schedule Consultation</span>
+                <svg
+                  class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+              <a
+                href="tel:2069196886"
+                class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300"
+              >
+                <svg
+                  class="w-5 h-5 text-emerald-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <span>(206) 919-6886</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div
+          class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 animate-on-scroll animate-hidden"
+        >
+          <div
+            class="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
+          >
+            <p class="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">
+              30+
+            </p>
+            <p class="text-gray-400 font-medium">Years Experience</p>
+          </div>
+          <div
+            class="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
+          >
+            <p class="text-4xl md:text-5xl font-bold text-white mb-2">500+</p>
+            <p class="text-gray-400 font-medium">Families Helped</p>
+          </div>
+          <div
+            class="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
+          >
+            <p class="text-4xl md:text-5xl font-bold text-white mb-2">$28M+</p>
+            <p class="text-gray-400 font-medium">Annual Sales</p>
+          </div>
+          <div
+            class="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
+          >
+            <p class="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">
+              98%
+            </p>
+            <p class="text-gray-400 font-medium">Client Satisfaction</p>
+          </div>
+        </div>
+
+        <!-- Testimonial Preview -->
+        <div
+          class="mt-16 max-w-4xl mx-auto text-center animate-on-scroll animate-hidden"
+        >
+          <div
+            class="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 backdrop-blur-sm border border-emerald-500/20 rounded-3xl p-10"
+          >
+            <!-- Stars -->
+            <div class="flex justify-center gap-1 mb-6">
+              <svg
+                class="w-6 h-6 text-amber-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-amber-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-amber-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-amber-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-6 h-6 text-amber-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+            </div>
+            <p class="text-xl md:text-2xl text-white leading-relaxed mb-6">
+              "Marci made our home buying experience absolutely seamless. Her
+              knowledge of the Pahrump market is unmatched, and she truly cared
+              about finding us the perfect home. We couldn't have asked for a
+              better realtor!"
+            </p>
+            <div class="flex items-center justify-center gap-4">
+              <div
+                class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold"
+              >
+                JD
+              </div>
+              <div class="text-left">
+                <p class="text-white font-semibold">John & Diana Peterson</p>
+                <p class="text-gray-400 text-sm">First-time Homebuyers</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1073,44 +1520,6 @@
             We don't just list properties—we create results. Our proven approach
             delivers faster sales at better prices.
           </p>
-        </div>
-
-        <!-- Stats Bar -->
-        <div
-          class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 animate-on-scroll animate-hidden"
-        >
-          <div
-            class="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100"
-          >
-            <p class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">
-              30+
-            </p>
-            <p class="text-gray-600 font-medium">Years Experience</p>
-          </div>
-          <div
-            class="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100"
-          >
-            <p class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">
-              90
-            </p>
-            <p class="text-gray-600 font-medium">Clients Helped</p>
-          </div>
-          <div
-            class="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100"
-          >
-            <p class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">
-              $28M
-            </p>
-            <p class="text-gray-600 font-medium">In Sales</p>
-          </div>
-          <div
-            class="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100"
-          >
-            <p class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">
-              98%
-            </p>
-            <p class="text-gray-600 font-medium">Client Satisfaction</p>
-          </div>
         </div>
 
         <!-- Feature Cards -->
